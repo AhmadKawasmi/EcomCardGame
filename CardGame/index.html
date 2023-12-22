@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="myCard">
+            <div class="cardTitle">
+                <h1>My Cards</h1>
+            </div>
+            <div class="cardImage">
+                <div class="roundContaier">
+                    <h3>round 1</h3>
+                     <img src="" alt="myCrad" id="myCardid_1">
+                </div>
+                <div class="roundContaier">
+                    <h3>round 2</h3>
+                     <img src="" alt="myCrad" id="myCardid_2">
+                </div>
+                <div class="roundContaier">
+                    <h3>round 3</h3>
+                     <img src="" alt="myCrad" id="myCardid_3">
+                </div>
+                <div class="roundContaier">
+                    <h3>round 4</h3>
+                     <img src="" alt="myCrad" id="myCardid_4">
+                </div>
+                <div class="roundContaier">
+                    <h3>round 5</h3>
+                     <img src="" alt="myCrad" id="myCardid_5">
+                </div>
+            </div>
+            <div class="score">
+                <h1>My Score :</h1>
+                <span id="myscore">0</span>
+            </div>
+        </div>
+        <div class="computerCard">
+            <div class="cardTitle">
+                <h1>Computer Cards</h1>
+            </div>
+            <div class="cardImage">
+                <div class="roundContaier">
+                    <h3>round 1</h3>
+                    <img src="" alt="ComputerCrad" id="computerCardid_1">
+                </div>
+                <div class="roundContaier">
+                    <h3>round 2</h3>
+                    <img src="" alt="ComputerCrad" id="computerCardid_2">
+                </div>
+                <div class="roundContaier">
+                    <h3>round 3</h3>
+                    <img src="" alt="ComputerCrad" id="computerCardid_3">
+                </div>
+                <div class="roundContaier">
+                    <h3>round 4</h3>
+                    <img src="" alt="ComputerCrad" id="computerCardid_4">
+                </div>
+                <div class="roundContaier">
+                    <h3>round 5</h3>
+                    <img src="" alt="ComputerCrad" id="computerCardid_5">
+                </div>
+            
+            </div>
+            <div class="score">
+                <h1>Computer Score :</h1>
+                <span id="computerScore">0</span>
+            </div>
+        </div>
+    </div>
+    <script>
+
+             let myScore = 0
+             let computerScore = 0
+        
+        for (let i = 1; i < 6; i++) {
+        
+            const myCrad = parseInt(prompt("what is your Card ? Round number " + i))
+            const computerCrad = parseInt(prompt("what is the computer Card ? Round number " + i))
+
+            
+
+            if (myCrad < computerCrad) {
+                     computerScore++
+                     document.getElementById('computerScore').innerHTML = computerScore
+                }else if (myCrad == computerCrad) {
+                     myScore = myScore + 0.5
+                     computerScore = computerScore + 0.5
+                     document.getElementById('computerScore').innerHTML = computerScore
+                     document.getElementById('myscore').innerHTML = myScore
+                   }else if (myCrad > computerCrad) {
+                          myScore++
+                          document.getElementById('myscore').innerHTML = myScore
+                  }
+                  
+                  switch(myCrad){
+                        case 2:
+                        case 3:
+                        case 4:
+                        case 5:
+                        case 6:
+                        case 7:
+                        case 8:
+                        case 9:
+                        case 10: 
+                            document.getElementById('myCardid_' + i).src = "Cards/Spades/" + myCrad + "_of_spades.png"
+                            break
+                        case 11:
+                            document.getElementById('myCardid_' + i).src = "Cards/Spades/jack_of_spades2.png"
+                            break
+                        case 12:
+                            document.getElementById('myCardid_' + i).src = "Cards/Spades/queen_of_spades2.png"
+                            break
+                        case 13:
+                            document.getElementById('myCardid_' + i).src = "Cards/Spades/king_of_spades2.png"
+                        case 14:
+                            document.getElementById('myCardid_' + i).src = "Cards/Spades/ace_of_spades2.png"
+
+                            break
+                        case 15:
+                            document.getElementById('myCardid_' + i).src = "Cards/Jokers/black_joker.png"
+                            break         
+                    }
+
+                    switch(computerCrad){
+                        case 2:
+                        case 3:
+                        case 4:
+                        case 5:
+                        case 6:
+                        case 7:
+                        case 8:
+                        case 9:
+                        case 10: 
+                            document.getElementById('computerCardid_' + i).src = "Cards/Hearts/" + computerCrad + "_of_hearts.png"
+                            break
+                        case 11:
+                            document.getElementById('computerCardid_' + i).src = "Cards/Hearts/jack_of_hearts2.png"
+                            break
+                        case 12:
+                            document.getElementById('computerCardid_' + i).src = "Cards/Hearts/queen_of_hearts2.png"
+                            break
+                        case 13:
+                            document.getElementById('computerCardid_' + i).src = "Cards/Hearts/king_of_hearts2.png"
+                            break
+                        case 14:
+                            document.getElementById('computerCardid_' + i).src = "Cards/Hearts/ace_of_hearts.png"
+                            break
+                        case 15:
+                            document.getElementById('computerCardid_' + i).src = "Cards/Jokers/red_joker.png"
+                            break         
+                    }
+        }
+
+       
+    </script>
+</body>
+</html>

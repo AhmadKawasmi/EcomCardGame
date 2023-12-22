@@ -1,0 +1,74 @@
+body{
+    background-color: green;
+    color: rgb(255, 255, 255);
+} 
+
+.mainContainer{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    background-color: green;
+}
+
+.myCard{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    justify-content: center;
+    align-content: center;
+}
+
+.computerCard{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    justify-content: center;
+    align-content: center;
+}
+
+.cardTitle{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-content: center;
+}
+
+.cardImage{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.cardImage img{
+    width: 75px;
+    height:100px;
+}
+
+.score{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    justify-content: center;
+    align-content: center;
+}
+ 
+.score span{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.roundContaier{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    justify-content: center;
+    align-content: center;
+    margin: 10px;
+}
